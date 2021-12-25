@@ -20,3 +20,33 @@ class Solution:
                                 break
                         square+=1
         return ans*ans
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+# class Solution:
+#     def maximalSquare(self, matrix: List[List[str]]) -> int:
+#         length = len(matrix)
+#         width = len(matrix[0])
+#         matrix_dp = [[0 for j in range(width)] for i in range(length)]
+#         for i in range(length):
+#             if matrix[i][0] == '1':
+#                 matrix_dp[i][0] = 1
+#         for j in range(width):
+#             if matrix[0][j] == '1':
+#                 matrix_dp[0][j] = 1
+#         ans = max(matrix_dp[0])
+#         for i in range(1, length):
+#             for j in range(1, width):
+#                 if matrix[i][j] == '1':
+#                     matrix_dp[i][j] = min(matrix_dp[i-1][j], matrix_dp[i][j-1], matrix_dp[i-1][j-1])+1
+#             ans = max(max(matrix_dp[i]), ans)
+#         return ans*ans
