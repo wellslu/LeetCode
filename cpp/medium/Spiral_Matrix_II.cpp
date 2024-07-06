@@ -1,14 +1,15 @@
 class Solution {
 public:
     vector<vector<int>> generateMatrix(int n) {
-        vector<vector<int>> answer;
-        for (int i = 0; i < n; i++) {
-            vector<int> v = {};
-            for (int j = 0; j < n; j++) {
-                v.push_back(3*i+j);
-            }
-            answer.push_back(v);
-        }
+        vector<vector<int>> answer(n, vector<int>(n));
+        // vector<vector<int>> answer;
+        // for (int i = 0; i < n; i++) {
+        //     vector<int> v = {};
+        //     for (int j = 0; j < n; j++) {
+        //         v.push_back(3*i+j);
+        //     }
+        //     answer.push_back(v);
+        // }
 
         int num = 1;
         int i = 0, r = 0;
