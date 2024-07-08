@@ -20,7 +20,7 @@ public:
             next_head = next_head->next;
         }
         next_head->next = head;
-        while(k >= length) k-=length;
+        k =  k % length;
         for(int i = 0; i <= length-k-1; i++) {
             next_head = next_head->next;
         }
