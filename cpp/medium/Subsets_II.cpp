@@ -7,7 +7,7 @@ public:
         dfs(nums, combination, answer);
         return answer;
     }
-    void dfs(vector<int> nums, vector<int>& combination, vector<vector<int>>& answer) {
+    void dfs(vector<int>& nums, vector<int>& combination, vector<vector<int>>& answer) {
         answer.push_back(combination);
         set<int> set_num(nums.begin(), nums.end());
         for (auto &i:set_num){
