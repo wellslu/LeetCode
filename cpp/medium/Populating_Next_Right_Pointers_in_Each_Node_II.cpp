@@ -19,6 +19,7 @@ public:
 class Solution {
 public:
     Node* connect(Node* root) {
+        if (root == nullptr) return root;
         vector<Node*> queue{root};
         next_level(queue);
         return root;
@@ -27,7 +28,7 @@ public:
         Node* node = nullptr;
         vector<Node*> next_queue;
         for (auto q:queue) {
-            if (q && q->left != nullptr) {
+            if (q->left != nullptr) {
                 if (node == nullptr) node = q->left;
                 else {
                     node->next = q->left;
@@ -35,7 +36,7 @@ public:
                 }
                 next_queue.push_back(q->left);
             }
-            if (q && q->right != nullptr) {
+            if (q->right != nullptr) {
                 if (node == nullptr) node = q->right;
                 else {
                     node->next = q->right;
