@@ -21,10 +21,12 @@ public:
         //     head = head->next;
         //     node_list.push_back(head);
         //     while (idx > 0 && node_list[idx]->val < node_list[idx-1]->val) {
-        //         swap(node_list[idx], node_list[idx-1]);
+        //         swap(node_list[idx]->val, node_list[idx-1]->val);
         //         idx--;
         //     }
         // }
+
+        // return node_list[0];
 
         vector<int> num_list;
         num_list.push_back(head->val);
@@ -33,14 +35,6 @@ public:
             num_list.push_back(head->val);
         }
         sort(num_list.begin(), num_list.end());
-        
-        // ListNode* ans = node_list[0];
-        // ListNode* node = ans;
-        // for (int i = 1; i < node_list.size(); ++i) {
-        //     node->next = node_list[i];
-        //     node = node->next;
-        // }
-        // node->next = nullptr;
 
         ListNode* ans = new ListNode(num_list[0]);
         ListNode* node = ans;
